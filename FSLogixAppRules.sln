@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31009.304
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSLogixAppRules", "FSLogixAppRules\FSLogixAppRules.csproj", "{52FFCBB7-0965-40B1-A650-D1D8B1C31203}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52FFCBB7-0965-40B1-A650-D1D8B1C31203}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{52FFCBB7-0965-40B1-A650-D1D8B1C31203}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{52FFCBB7-0965-40B1-A650-D1D8B1C31203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FFCBB7-0965-40B1-A650-D1D8B1C31203}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24D7A4B6-9CAE-4A60-BEA8-6366389F73A2}
+	EndGlobalSection
+EndGlobal

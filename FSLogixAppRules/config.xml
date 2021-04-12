@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppConfig>
+  <Source>C:\Source</Source>
+  <Destination>C:\Program Files\FSLogix\Apps\Rules</Destination>
+  <RunEveryMinutes>60</RunEveryMinutes>
+</AppConfig>
