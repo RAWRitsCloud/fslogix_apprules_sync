@@ -8,6 +8,7 @@ using System.Threading;
 using System.Timers;
 using System.Diagnostics;
 using System.Xml;
+using System.Linq;
 
 namespace FSLogixAppRules
 {
@@ -21,7 +22,7 @@ namespace FSLogixAppRules
         public FSLogixAppRulesCopy()
         {
             appLog = new EventLog("Application");
-            appLog.Source = "FSLogix App Masking Rules Copier";
+            appLog.Source = "FSLogix App Masking Rules Sync";
 
             XmlDocument config = new XmlDocument();
             string fileName = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"config.xml";
@@ -47,12 +48,20 @@ namespace FSLogixAppRules
         {
             appLog.WriteEntry("Starting Copy Job, Rule Source: " + rulesSource + ", Rule Destination: " + rulesDestination, EventLogEntryType.Information, 101);
 
-
             string fileName;
             string destFile;
-            string[] files = System.IO.Directory.GetFiles(rulesSource);
+            string[] ruleFiles = System.IO.Directory.GetFiles(rulesSource,"*.fxr");
+            string[] aclFiles = System.IO.Directory.GetFiles(rulesSource, "*.fxa");
 
-            foreach (string s in files)
+            foreach (string s in ruleFiles)
+            {
+                // Use static Path methods to extract only the file name from the path.
+                fileName = System.IO.Path.GetFileName(s);
+                destFile = System.IO.Path.Combine(rulesDestination, fileName);
+                System.IO.File.Copy(s, destFile, true);
+            }
+
+            foreach (string s in aclFiles)
             {
                 // Use static Path methods to extract only the file name from the path.
                 fileName = System.IO.Path.GetFileName(s);

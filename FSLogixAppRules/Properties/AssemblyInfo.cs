@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FSLogixAppRules")]
+[assembly: AssemblyTitle("FSLogix App Masking Rules Sync")]
 [assembly: AssemblyDescription("A service that copies FSLogix Rules to the Rules folder every hour")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ANS Group Limited")]
-[assembly: AssemblyProduct("FSLogixAppRules")]
+[assembly: AssemblyCompany("James Murray-Ferris")]
+[assembly: AssemblyProduct("FSLogix App Masking Rules Sync")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
